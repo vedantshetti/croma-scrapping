@@ -11,11 +11,11 @@ def scrape_page_elements(url):
 
     # TODO: Scrape the head element
     # Refer to BeautifulSoup documentation for more details on how to scrape elements.
-    head = None
+    head = soup.head
 
     # TODO: Scrape the header element.
     # Note: The header is a div with class 'bs-header' on the page we're using.
-    header = None
+    header = soup.find('div', class_='bs-header')
         
     response = {
         "head": str(head) if head else None,
